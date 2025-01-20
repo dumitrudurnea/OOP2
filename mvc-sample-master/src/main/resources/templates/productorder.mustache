@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comandă Produse</title>
+</head>
+<body>
+<h1>Comandă Produse</h1>
+<p>Utilizatorul: {{userAccess.name}}</p>
+<p></p>
+<p><strong>{{foodChoice.name}} - Preț: {{foodChoice.price}} lei</strong></p>
+<form action="/submit-food-order?userAccessId={{userAccess.id}}" method="post">
+<input type="hidden" name="foodChoice" value="{{foodChoice.id}}">
+<input type="submit" value="Adaugă în coș">
+</form>
+</body>
+</html>
